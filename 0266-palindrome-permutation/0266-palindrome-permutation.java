@@ -14,18 +14,13 @@ class Solution {
 
         if (map.size() == 1) return true;
 
-        List<Character> keys = new ArrayList<>(map.keySet());
-        boolean ans = true;
+        boolean isOddNumber = false;
 
-        // 짝수인 경우를 위한 판별
-        for (Character key : keys) {
-            if (len % 2 == 1) {
-                if (map.get(key) % 2 == 1) {
-                    if (!ans) return false;
-                    else ans = false;
-                }
-            } else {
-                if (map.get(key) % 2 == 1) return false;
+        for (int cnt : map.values()) {
+            if (cnt % 2 == 1) {
+                if (len % 2 == 0) return false;
+                if (isOddNumber) return false;
+                else isOddNumber = true;
             }
         }
 
