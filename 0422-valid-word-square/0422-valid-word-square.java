@@ -1,4 +1,4 @@
-What is the time complexity and space complexity of the code below?
+
 class Solution {
     public boolean validWordSquare(List<String> words) {
         for(int i = 0; i < words.size(); i++) {
