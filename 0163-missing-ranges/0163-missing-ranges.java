@@ -1,12 +1,10 @@
 class Solution {
     public List<List<Integer>> findMissingRanges(int[] nums, int lower, int upper) {
-        List<List<Integer>> ans = new ArrayList<>();
-        
         if (nums.length == 0) {
-            ans.add(List.of(lower, upper));
-            return ans;
+            return new ArrayList<>(List.of(List.of(lower, upper)));
         }
-        
+
+        List<List<Integer>> ans = new ArrayList<>();
         Arrays.sort(nums);
 
         if (nums.length > 0 && nums[0] > lower) {
