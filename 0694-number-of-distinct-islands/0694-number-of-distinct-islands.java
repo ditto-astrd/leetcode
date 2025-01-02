@@ -38,7 +38,7 @@ class Solution {
         dfs(y, x+1, grid, visited, islands, sb, 'R');
         dfs(y, x-1, grid, visited, islands, sb, 'L');
 
-        sb.append('B');
+        sb.append('B');     // 백트래킹 마킹
     }
 }
 
